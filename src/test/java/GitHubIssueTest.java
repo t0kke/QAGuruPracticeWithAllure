@@ -7,14 +7,17 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class GitHubIssueTest {
+
+    private static final String REPOSITORY = "t0kke/PracticeInDemoQA";
+    private static final String ISSUE_NAME = "Test Issue";
     @Test
     public void testIssueSearchWithName() {
         open("https://github.com/");
         $(".header-search-input").click();
-        $(".header-search-input").sendKeys("t0kke/PracticeInDemoQA");
+        $(".header-search-input").setValue(REPOSITORY);
         $(".header-search-input").submit();
-        $(By.linkText("t0kke/PracticeInDemoQA")).click();
+        $(By.linkText(REPOSITORY)).click();
         $(withText("Issues")).click();
-        $(withText("Test Issue")).should(Condition.exist);
+        $(withText(ISSUE_NAME)).should(Condition.exist);
     }
 }
