@@ -1,3 +1,5 @@
+package steps;
+
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;

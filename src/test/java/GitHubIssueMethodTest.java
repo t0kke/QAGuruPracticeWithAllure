@@ -1,6 +1,7 @@
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Test;
+import steps.BaseSteps;
 
 public class GitHubIssueMethodTest {
     private static final String REPOSITORY = "t0kke/PracticeInDemoQA";
