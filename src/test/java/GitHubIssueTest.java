@@ -10,6 +10,7 @@ public class GitHubIssueTest {
 
     private static final String REPOSITORY = "t0kke/PracticeInDemoQA";
     private static final String ISSUE_NAME = "Test Issue";
+
     @Test
     public void testIssueSearchWithName() {
         open("https://github.com/");
